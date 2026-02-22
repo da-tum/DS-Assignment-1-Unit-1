@@ -3,12 +3,13 @@
 *Submitted for College Evaluation.*
 
 ## Student Information
-**Subject:** Data Structure's
-**Assignment:** Unit 1 (Recursion & Searching)
-**Name:** Harsh Dev Jha
-**ID:** 2501010168
-**Section:** B.Tech CSE CORE SEC-A
-**Semester:** 2nd
+
+**Subject:** Data Structure's  
+**Assignment:** Unit 1 
+**Name:** Harsh Dev Jha  
+**ID:** 2501010168  
+**Section:** B.Tech CSE CORE SEC-A  
+**Semester:** 2nd  
 ---
 
 ## Project Overview
