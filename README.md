@@ -1,9 +1,14 @@
 # Data Structures - Unit 1 Assignment
 
-## Student Information
-**Subject:** Data Structures & Algorithms
-**Assignment:** Unit 1 (Recursion & Searching)
+*Submitted for College Evaluation.*
 
+## Student Information
+**Subject:** Data Structure's
+**Assignment:** Unit 1 (Recursion & Searching)
+**Name:** Harsh Dev Jha
+**ID:** 2501010168
+**Section:** B.Tech CSE CORE SEC-A
+**Semester:** 2nd
 ---
 
 ## Project Overview
@@ -65,4 +70,3 @@ python q4_binary_search.py
 ```
 
 ---
-*Submitted for College Evaluation.*
