@@ -1,68 +1,69 @@
-# Data Structures - Unit 1 Assignment
+# Data structures - unit 1 assignment
 
-*Submitted for College Evaluation.*
+*Submitted for college evaluation.*
 
-## Student Information
+## Student information
 
-**Subject:** Data Structure's  
+**Subject:** Data structures  
 **Assignment:** Unit 1  
 **Name:** Harsh Dev Jha  
 **ID:** 2501010168  
 **Section:** B.Tech CSE CORE SEC-A  
 **Semester:** 2nd  
----
-
-## Project Overview
-
-This assignment covers fundamental concepts of recursion and searching. It includes implementations of classic mathematical problems and search algorithms, along with complete complexity analysis. Each solution is provided in Python, adhering to recommended academic practices.
 
 ---
 
-## Question 1: Recursive Factorial
+## Project overview
+
+This assignment covers recursion and searching. It includes some common math problems and search algorithms along with their complexity analysis. Everything is written in Python.
+
+---
+
+## Question 1: Recursive factorial
 **File:** `q1_factorial.py`
 
-The factorial of a non-negative integer $n$ is the product of all positive integers less than or equal to $n$. This implementation explores two recursive strategies: a naive approach and an optimized memoized version.
-- **Naive Recursion:** Directly follows the mathematical definition $n! = n \times (n-1)!$.
-- **Memoization:** Enhances efficiency by caching previously computed values, reducing redundant overhead for repeated calls.
-- **Complexity:** Time $O(n)$, Space $O(n)$ due to the recursion stack.
+The factorial of a number is the product of all positive integers up to that number. I've included two ways to do this:
+- Naive recursion: This follows the math definition.
+- Memoization: This uses a cache to make it faster by not repeating calculations.
+- Complexity: Time is O(n) and space is O(n).
 
 ---
 
-## Question 2: Recursive Fibonacci
+## Question 2: Recursive fibonacci
 **File:** `q2_fibonacci.py`
 
-The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones. This script highlights the drastic performance difference between standard recursion and memoization.
-- **Efficiency Analysis:** The naive method calculates $O(2^n)$ branches, which becomes unusable for larger values of $n$.
-- **Optimization:** Using a dictionary cache reduces the complexity to $O(n)$, making the calculation near-instantaneous even for $n=100$.
-- **Complexity:** Naive $O(2^n)$, Memoized $O(n)$ time.
+The fibonacci sequence is where each number is the sum of the last two. This script compares a standard recursive approach with a memoized one.
+- Performance: The naive method is very slow for bigger numbers.
+- Optimization: A simple dictionary cache makes it much faster, even for n=100.
+- Complexity: Naive is O(2^n) and memoized is O(n).
 
 ---
 
-## Question 3: Tower of Hanoi
+## Question 3: Tower of hanoi
 **File:** `q3_tower_of_hanoi.py`
 
-The Tower of Hanoi is a mathematical puzzle consisting of three rods and a number of disks of various sizes. The goal is to move the entire stack from the source rod to the destination rod, following specific rules (e.g., no larger disk on a smaller one).
-- **Implementation:** The code uses a classic divide-and-conquer recursive strategy to find the optimal sequence of moves.
-- **Analysis:** Includes a systematic trace of moves for $N=3$ disks to visualize the recursive flow.
-- **Complexity:** Time $O(2^n)$, Space $O(n)$.
+Tower of hanoi is a puzzle with three rods and different sized disks. The goal is to move the stack from one rod to another without ever putting a bigger disk on a smaller one.
+- Implementation: This uses a divide and conquer strategy.
+- Analysis: I've included a trace for 3 disks to show how it works.
+- Complexity: Time is O(2^n) and space is O(n).
 
 ---
 
-## Question 4: Recursive Binary Search
+## Question 4: Recursive binary search
 **File:** `q4_binary_search.py`
 
-Binary search is an efficient algorithm for searching a sorted list by repeatedly dividing the search interval in half. This implementation uses recursion to narrow down the potential index of the target value.
-- **Logic:** The algorithm compares the target value with the middle element; if they aren't equal, the half in which the target cannot lie is eliminated, and the search continues on the remaining half.
-- **Analysis:** Uses the Master Theorem and recursion tree method to justify its efficiency on large datasets.
-- **Complexity:** Time $O(\log n)$, Space $O(\log n)$.
+Binary search is a way to find a value in a sorted list by splitting the search area in half each time.
+- Logic: It checks the middle, then decides which half to search next.
+- Analysis: I used the master theorem to show why it's efficient.
+- Complexity: Time is O(log n) and space is O(log n).
 
 ---
 
 ## Documentation
-- `explanation.md`: Detailed technical justifications, mathematical derivations, and step-by-step traces for evaluation.
+- `explanation.md`: Technical details and traces for the assignment.
 
-## How to Run
-Ensure you have Python 3 installed. Run files via terminal:
+## How to run
+Make sure you have Python 3 installed. You can run the files like this:
 ```bash
 python q1_factorial.py
 python q2_fibonacci.py

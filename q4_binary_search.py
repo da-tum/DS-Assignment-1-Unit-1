@@ -1,84 +1,60 @@
 """
-Q=4 Recursive Binary Search Implementation
-
-This script demonstrates recursive binary search and provides a 
-recurrence-based complexity explanation.
+q4 recursive binary search implementation
 """
 
 def binary_search_recursive(arr, low, high, target):
     """
-    Performs recursive binary search.
+    performs recursive binary search on a sorted list.
     arr: sorted list
-    low: starting index
-    high: ending index
-    target: element to find
-    Returns: index of target if found, else -1
+    low: start index
+    high: end index
+    target: what we're looking for
+    returns: the index if found, or -1
     """
     if low <= high:
         mid = (low + high) // 2
 
-        # Case 1: Target found at middle
+        # if it's at the middle
         if arr[mid] == target:
             return mid
 
-        # Case 2: Target is smaller than mid, search in left half
+        # if it's smaller than mid, check left half
         elif arr[mid] > target:
             return binary_search_recursive(arr, low, mid - 1, target)
 
-        # Case 3: Target is larger than mid, search in right half
+        # if it's larger than mid, check right half
         else:
             return binary_search_recursive(arr, mid + 1, high, target)
 
-    # Base case: Target not present
+    # base case when target isn't there
     return -1
 
 
-# --- Recurrence-Based Complexity Explanation ---
+# complexity notes
 """
-COMPLEXITY EXPLANATION:
+time complexity:
+binary search splits the list in half each time. 
+the recurrence is T(n) = T(n/2) + O(1).
+using the master theorem, this comes out to O(log n).
 
-1. Recurrence Relation:
-   Binary Search divides the problem size by half in each step and performs a constant amount of work O(1) for comparisons.
-   Recurrence: T(n) = T(n/2) + C
-
-2. Using Master Theorem:
-   General form: T(n) = a*T(n/b) + f(n)
-   Here: a = 1, b = 2, f(n) = C = O(n^0)
-   
-   Calculate n^(log_b(a)):
-   n^(log_2(1)) = n^0 = 1
-   
-   Since f(n) = O(n^(log_b(a))), Case 2 of Master Theorem applies.
-   T(n) = Θ(n^(log_b(a)) * log_n) = Θ(1 * log_n) = O(log n)
-
-3. Recursion Tree Method:
-   - Level 0: n
-   - Level 1: n/2
-   - Level 2: n/4
-   ...
-   - Level k: n/2^k = 1 (Base case)
-   - Taking log on both sides: k = log_2(n)
-   Since work at each level is constant, Total Work = C * (Number of levels) = C * log_2(n).
-
-RESULT:
-- Time Complexity: O(log n)
-- Space Complexity: O(log n) due to recursive call stack.
+space complexity:
+it's O(log n) because of the recursion stack depth.
 """
 
 def main():
     sorted_array = [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
     target_val = 23
     
-    print(f"--- Q=4 Recursive Binary Search ---")
-    print(f"Array: {sorted_array}")
-    print(f"Target: {target_val}")
+    print(f"--- q4 recursive binary search ---")
+    print(f"array: {sorted_array}")
+    print(f"target: {target_val}")
     
     result = binary_search_recursive(sorted_array, 0, len(sorted_array) - 1, target_val)
     
     if result != -1:
-        print(f"Target found at index: {result}")
+        print(f"found at index: {result}")
     else:
-        print("Target not found in array.")
+        print("not found.")
 
 if __name__ == "__main__":
     main()
